@@ -90,7 +90,7 @@ with open("studio_ghibli_movies_clean.csv", "w", newline="", encoding="utf-8") a
     writer = csv.DictWriter(file, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(rows)
-print(f"Saved cleaned dataset to: {os.getcwd()}\studio_ghibli_movies_clean.csv")
+print(f"Saved cleaned dataset to: {os.getcwd()}\studio_ghibli_movies_clean.csv") # is this correct? Will just print terminal cwd, right?
 
 with open("studio_ghibli_movies_clean.csv", "r", newline="", encoding="utf-8") as file:
     reader = csv.DictReader(file)
