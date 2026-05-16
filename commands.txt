@@ -1,3 +1,8 @@
 $env:GEMINI_API_KEY="paste key here"
 
 python3 -c "import os; k=os.getenv('GEMINI_API_KEY'); print('GEMINI_API_KEY set:', bool(k)); print('Key length:', len(k) if k else 0)"
+
+
+git add .
+git commit -m "Message"
+git push origin main
