@@ -29,6 +29,10 @@ You can also pull updates from the original repository (upstream) when new mater
   Iterators/generators, streaming vs loading, complexity, and intro RAG concepts.
 - [Session 4 README](./session4/README.md)  
   Serial vs multiprocessing basics, process management, and `Pool`-based parallel image processing.
+- [Session 5 README](./session5/README.md)  
+  Capstone activity instructions and link to the capstone repository.
+- [Session 6 README](./session6/README.md)  
+  Mutexes, semaphores, controlled concurrency, and an optional parallel printer simulation project.
 
 ## Notes
 
