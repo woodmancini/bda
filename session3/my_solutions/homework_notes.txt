@@ -1,0 +1,11 @@
+Which tasks were best solved with streaming?
+    Dividing text into chunks of given length while ignoring empty lines.
+Which tasks required loading all data?
+    Generating the prompt loaded all data (in the chunk).
+Why is a generator with yield still an iterator?
+    That's how it works under the hood.
+When does yield save memory compared with readlines()?
+    When you only need to store one part of the file (like a chunk) at a time.
+Why is sending the whole book to Gemini in one prompt a bad idea?
+    The context window would be huge, making for a very expensive (and slow?) prompt. Also, summarising the 'events'
+    of the book will probably generate a huge response. 

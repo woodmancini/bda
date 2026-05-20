@@ -1,0 +1,36 @@
+Write a short reflection, around 150-250 words. Answer these questions:
+
+In your own words, what is RAG?
+What is the context window? Why can we not always send a whole book, website, or dataset to an LLM?
+How do iterators and yield help us build the context gradually instead of loading everything at once?
+What is one trade-off between sending more context and sending less context to Gemini?
+Hint: Think about answer quality, missing useful evidence, prompt length, cost, and noise.
+
+Use this small use case in your answer:
+    A student has 50 lecture transcripts and wants to ask:
+    "What did we say about dynamic programming?"
+
+Explain how a simple RAG system could:
+    stream through the transcript files,
+    retrieve only chunks that mention useful keywords,
+    put those chunks into the prompt,
+    ask Gemini for an answer.
+
+Responses:
+
+RAG stands for retrieval-augmented generation. The AI can search for additional context or information in external sources.
+
+The context window is the limit on how many tokens (how much material) the AI can reference when answering a given prompt. 
+
+Iterators and yield allow us to filter the source material line by line (instead of loading the whole thing into memory). 
+Relevant lines can be added to a list (acting as a context window) as needed. This way, we keep the context window manageable 
+while hopefully extracting the most meaningful information from the source.
+
+More context: more expensive prompt; AI prompts are charged based on size of context window + size of output, in tokens (and 
+output costs more per token).
+Less context: poorer/less informative responses.
+
+A simple RAG system could iterate through the transcript files, filtering and loading one line at a time by searching for keywords
+and/or filtering out empty lines. Relevant lines can then be added to a single list or file which can act as context window for an AI prompt.
+Possible problems: if the keywords are too generic (for example, if 'programming' itself is a keyword) the context window will be too big 
+and mostly irrelevant. It might be useful to limit size of context file before prompting.
